@@ -1,0 +1,393 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+
+}
+
+#map {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    //  border-style: solid;
+    // border-color: black;
+    // border-width: thin;
+
+}
+
+#query_tab {
+    position: absolute;
+    padding: 0.5% 0%;
+    left: 0%;
+    width: 0%;
+    height: 100%;
+    //border-style: solid;
+    //border-color: black;
+    //border-width: thin;
+    visibility: hidden;
+    //overflow: scroll;
+
+}
+
+#legend {
+    z-index: 11;
+    padding: 2px 4px;
+    border: 1px solid grey;
+    position: absolute;
+    bottom: 7%;
+    height: 0%;
+    overflow: scroll;
+    width: 0%;
+    right: 0%;
+    z-index: 10000;
+    background-color: #ffffff;
+    font-weight: bold;
+    visibility: hidden;
+
+}
+
+#layer {
+    position: relative;
+    width: 85%;
+}
+
+#attributes {
+    position: relative;
+    width: 85%;
+}
+
+#operator {
+    position: relative;
+    width: 85%;
+}
+
+#value {
+    position: relative;
+    width: 85%;
+}
+
+#layer1 {
+    position: relative;
+    width: 85%;
+}
+
+#draw_type {
+    position: relative;
+    width: 85%;
+}
+
+
+/* #table_data {
+    position: absolute;
+    bottom: 0%;
+    overflow: scroll;
+    left: 0%;
+    right: 0%;
+    height: 0%;
+    border: 1px solid #4CAF50;
+} */
+
+#table {
+    white-space: nowrap;
+    grid-template-areas: "head-fixed""body-scrollable";
+}
+
+
+#table th {
+    position: -webkit-sticky;
+    /* for Safari */
+    position: sticky;
+    top: 0px;
+    background-color: rgb(122, 209, 100);
+}
+
+#wms_layers_btn {
+    position: absolute;
+    z-index: 600;
+    top: 1%;
+    left: 30%;
+    display: none;
+}
+
+#query_panel_btn {
+    position: absolute;
+    z-index: 600;
+    top: 1%;
+    left: 10%;
+    display: none;
+}
+
+#legend_btn {
+    position: absolute;
+    z-index: 600;
+    bottom: 2%;
+    right: 0%;
+    display: none;
+}
+
+
+#table_wms_layers {
+    white-space: nowrap;
+    grid-template-areas: "head-fixed""body-scrollable";
+}
+
+#table_wms_layers th {
+    position: -webkit-sticky;
+    /* for Safari */
+    position: sticky;
+    top: 0px;
+    background-color: rgb(122, 209, 100);
+}
+
+
+.modal-dialog {
+    max-width: 60% !important;
+    height: 60% !important;
+    top: 18% !important;
+
+
+}
+
+/*.form-select {
+    left: 0%;
+    width: 85% !important;
+
+}*/
+
+/*.form-control {
+    left: 0%;
+    width: 85% !important;
+
+}*/
+
+#clear_btn {
+    position: absolute;
+    z-index: 500;
+    top: 1%;
+    left: 50%;
+    display: none;
+
+}
+
+#info_btn {
+    position: absolute;
+    z-index: 500;
+    top: 1%;
+    left: 80%;
+
+}
+
+#scale_bar {
+
+    position: absolute;
+    z-index: 500;
+    bottom: 0%;
+    left: 20%;
+}
+
+#scale_bar1 {
+    //color: red;
+    font-weight: bold;
+    position: absolute;
+    z-index: 500;
+    top: 22.875em;
+    left: 0.5em;
+
+}
+
+.ol-popup-content {
+
+    max-width: 500px;
+}
+
+.ol-scale-step-text {
+    //color: red;
+}
+
+.ol-scale-text {
+    //color: red;
+    font-weight: bold;
+}
+
+.layer-switcher.shown {
+    max-height: 465px;
+}
+
+.ol-control button {
+    background-color: rgba(40, 40, 40, 0.8) !important;
+}
+
+.ol-control button:hover {
+    background-color: rgba(40, 40, 40, 1) !important;
+}
+
+.ol-mouse-position {
+    top: 95%;
+    left: 0.5%;
+    position: absolute;
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.ol-zoom-extent {
+    top: 3.8em;
+    left: 0.5em;
+    position: absolute;
+}
+
+.ol-zoomslider {
+    top: 5.8em;
+    left: 0.5em;
+    position: absolute;
+    height: 200px;
+}
+
+.ol-geocoder.gcd-gl-container {
+    top: 21.875em;
+    left: 0.5em;
+    position: absolute;
+}
+
+
+
+.tooltip {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    color: white;
+    padding: 4px 8px;
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+.tooltip-measure {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.tooltip-static {
+    background-color: #ffcc33;
+    color: black;
+    border: 1px solid white;
+}
+
+.tooltip-measure:before,
+.tooltip-static:before {
+    border-top: 6px solid rgba(0, 0, 0, 0.5);
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    margin-left: -7px;
+    left: 50%;
+}
+
+.tooltip-static:before {
+    border-top-color: #ffcc33;
+}
+
+#popup {
+   background-color: white;
+   border-radius: 5px;
+   padding: 10px;
+   position: absolute;
+   bottom: 12px;
+   left: -50px;
+   width: 250px;
+   z-index: 700;
+}
+
+#infodata{
+   position: absolute;
+   z-index: 600;
+   top: 7%;
+   left: 3%;
+   width: 28%;
+   padding: 5px;
+   border: 2px solid rgb(0, 0, 0);
+   border-radius: 5px;
+   background-color: white;
+
+}
+#measuretype {
+   position: absolute;
+   z-index: 600;
+   top: 1%;
+   left: 3%;
+   width: 28%;
+   border: 2px solid black;
+   border-radius: 5px;
+}
+span{
+   font-family: 'Gill Sans MT', sans-serif;
+   padding-left: 5px;
+   padding-right: 5px;
+}
+#infodata2{
+   position: absolute;
+   z-index: 600;
+   top: 13%;
+   left: 3%;
+   width: 28%;
+   padding: 5px;
+   border: 2px solid rgb(0, 0, 0);
+   border-radius: 5px;
+   background-color: white;
+}
+
+#movecoordinatesbtn, #getLocationBtn{
+   background-color: #1c6105;
+   color: white;
+   border: none;
+   padding: 5px 10px;
+   text-align: center;
+   text-decoration: none;
+   display: block;
+   font-size: 16px;
+   margin: 4px auto; /* Center horizontally */
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+#cordinput input[type="text"] {
+   width: 70%;
+   padding: 2px;
+   margin: 5px 0;
+   box-sizing: border-box;
+   border: 2px solid #1c6105;
+   border-radius: 5px;
+   color: #1c6105;
+   font-size: 16px;
+}
+
+@media (max-width: 600px) {
+   #infodata2 {
+       width: 90%;
+       left: 5%;
+       top: 16%;
+   }
+   #infodata {
+       width: 90%;
+       left: 5%;
+       top: 6%;
+   }
+   #measuretype {
+       width: 90%;
+       left: 5%;
+       top: 1%;
+   }
+
+   #cordinput input[type="text"] {
+       width: 90%;
+   }
+
+   #movecoordinatesbtn, #getLocationBtn {
+       width: 100%;
+       margin: 10px 5px;
+   }
+}
