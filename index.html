@@ -144,10 +144,8 @@
     </div> -->
     <div id="infodata2">
         <div id="cordinput">
-            <label for="x-coordinate">X Coordinate:</label>
             <input type="text" id="x-coordinate" name="x_coordinate" placeholder="Enter X coordinate">
             <br>
-            <label for="y-coordinate">Y Coordinate:</label>
             <input type="text" name="y_coordinate" id="y-coordinate" placeholder="Enter Y coordinate">
             <br>
             <div style="display: flex;">
@@ -156,11 +154,28 @@
             </div>
         </div>
     </div>
+    <button type="button" id="sidebarToggleBtn">☰</button>
     <div id="popup"></div>
     <script src="map.js"></script>
 
 </body>
 <script>
+// Select the button and the blocks
+    var button = document.getElementById('sidebarToggleBtn');
+    var infodata2 = document.getElementById('infodata2');
+    var measuretype = document.getElementById('measuretype');
+
+    // Add an event listener to the button
+    button.addEventListener('click', function() {
+    // Toggle the display style of the blocks
+    [infodata2, measuretype].forEach(function(element) {
+        if (element.style.display === 'none' || element.style.display === '') {
+        element.style.display = 'block';
+        } else {
+        element.style.display = 'none';
+        }
+    });
+    });
     $(document).ready(function () {
     $('#getLocationBtn').click(function () {
         getLocation();
